@@ -9602,37 +9602,87 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Show = function (_React$Component) {
-    _inherits(Show, _React$Component);
+var Index = function (_React$Component) {
+    _inherits(Index, _React$Component);
 
-    function Show() {
-        _classCallCheck(this, Show);
+    function Index() {
+        var _ref;
 
-        return _possibleConstructorReturn(this, (Show.__proto__ || Object.getPrototypeOf(Show)).apply(this, arguments));
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, Index);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            options: ["1", "2", "3", "4"],
+            option: null,
+            value: ""
+        }, _this.handleShowOption = function () {
+            var index = Math.floor(Math.random() * _this.state.options.length);
+            _this.setState({
+                option: _this.state.options[index]
+            });
+        }, _this.handleWriteJoke = function (e) {
+            _this.setState({
+                value: e.target.value
+            });
+        }, _this.handleAddJoke = function () {
+            if (_this.state.value === "") {
+                return alert("Wpisz coś");
+            }
+            var options = [].concat(_toConsumableArray(_this.state.options));
+            options.push(_this.state.value);
+            _this.setState({
+                options: options,
+                value: ""
+            });
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
-    _createClass(Show, [{
+    _createClass(Index, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 'div',
                 null,
-                'Hello Word'
+                _react2.default.createElement(
+                    'button',
+                    { onClick: this.handleShowOption },
+                    'Losuj \u017Cart'
+                ),
+                this.state.option ? _react2.default.createElement(
+                    'h1',
+                    null,
+                    this.state.option
+                ) : null,
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { type: 'text', value: this.state.value, onChange: this.handleWriteJoke }),
+                _react2.default.createElement(
+                    'button',
+                    { onClick: this.handleAddJoke },
+                    'Dodaj \u017Cart'
+                ),
+                _react2.default.createElement('br', null)
             );
         }
     }]);
 
-    return Show;
+    return Index;
 }(_react2.default.Component);
 
 document.addEventListener('DOMContentLoaded', function () {
-    _reactDom2.default.render(_react2.default.createElement(Show, null), document.getElementById('app'));
+    _reactDom2.default.render(_react2.default.createElement(Index, null), document.getElementById('app'));
 });
 
 /***/ }),
