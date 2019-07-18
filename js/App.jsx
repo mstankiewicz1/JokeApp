@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom';
 class Index extends React.Component {
 
     state = {
-      options: ["1", "2", "3", "4"],
-      option: null,
-      value: "",
+        options: ["1", "2", "3", "4"],
+        option: null,
+        value: "",
     };
 
     handleShowOption = () => {
