@@ -48,7 +48,7 @@ class Index extends React.Component {
 
     handleAddJoke = () => {
         if(this.state.value === "") {
-            return alert("Wpisz coś");
+            return alert("WPISZ CYTAT!");
         }
         const options = [...this.state.options];
         options.push(this.state.value);
@@ -63,12 +63,13 @@ class Index extends React.Component {
         return (
             <div className="container">
                 <p className="mainTitle">GENERATOR ŚMIESZNYCH CYTATÓW!</p>
-                <p className="writeQuote">{this.state.option ? <h1>{this.state.option}</h1> : null }</p>
+                {this.state.option ? <h1>{this.state.option}</h1> : null }
                 <button className="generationButton" onClick={this.handleShowOption}>GENERUJ!</button>
                 <br/>
                 <input type="text" value={this.state.value} onChange={this.handleWriteJoke}/>
-                <button onClick={this.handleAddJoke}>Dodaj żart</button>
+                <button className="addButton" onClick={this.handleAddJoke}>DODAJ CYTAT!</button>
                 <br/>
+                <p className="additionalText">HA HA HA... NOPE.</p>
             </div>
         )
     }

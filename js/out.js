@@ -9639,7 +9639,7 @@ var Index = function (_React$Component) {
             });
         }, _this.handleAddJoke = function () {
             if (_this.state.value === "") {
-                return alert("Wpisz coś");
+                return alert("WPISZ CYTAT!");
             }
             var options = [].concat(_toConsumableArray(_this.state.options));
             options.push(_this.state.value);
@@ -9661,15 +9661,11 @@ var Index = function (_React$Component) {
                     { className: 'mainTitle' },
                     'GENERATOR \u015AMIESZNYCH CYTAT\xD3W!'
                 ),
-                _react2.default.createElement(
-                    'p',
-                    { className: 'writeQuote' },
-                    this.state.option ? _react2.default.createElement(
-                        'h1',
-                        null,
-                        this.state.option
-                    ) : null
-                ),
+                this.state.option ? _react2.default.createElement(
+                    'h1',
+                    null,
+                    this.state.option
+                ) : null,
                 _react2.default.createElement(
                     'button',
                     { className: 'generationButton', onClick: this.handleShowOption },
@@ -9679,10 +9675,15 @@ var Index = function (_React$Component) {
                 _react2.default.createElement('input', { type: 'text', value: this.state.value, onChange: this.handleWriteJoke }),
                 _react2.default.createElement(
                     'button',
-                    { onClick: this.handleAddJoke },
-                    'Dodaj \u017Cart'
+                    { className: 'addButton', onClick: this.handleAddJoke },
+                    'DODAJ CYTAT!'
                 ),
-                _react2.default.createElement('br', null)
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                    'p',
+                    { className: 'additionalText' },
+                    'HA HA HA... NOPE.'
+                )
             );
         }
     }]);
