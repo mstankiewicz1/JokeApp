@@ -16,7 +16,7 @@ class Index extends React.Component {
             "Wiedza polega na tym, że mamy świadomość, iż pomidor to owoc. Mądrość polega na tym, że nie dodajemy go do sałatki owocowej",
             "Zawsze pożyczaj pieniądze od pesymistów. Nie będzie spodziewał się ich zwrotu",
             "Szaleństwo jest dziedziczne. Dostajesz na głowę z powodu swoich dzieci",
-            "Makler zachęcał mnie do zakupu akcji, które potroją swoją wartość każdego roku. Powiedziałem mu: \"W moim wieku nie kupuję nawet zielonych bananów",
+            "Makler zachęcał mnie do zakupu akcji, które potroją swoją wartość każdego roku. Powiedziałem mu: W moim wieku nie kupuję nawet zielonych bananów",
             "Chodzenie do kościoła nie czyni cię bardziej chrześcijaninem, niż stanie w garażu czyni cię samochodem",
             "Jeśli kradniesz od jednego autora, to plagiat. Jeśli kradniesz od wielu, to są badania",
             "Kiedy umrę, chcę odejść spokojnie, jak mój dziadek, we śnie. Nie chcę odchodzić krzycząc i wrzeszcząc, jak pasażerowie w jego samochodzie",
@@ -61,10 +61,10 @@ class Index extends React.Component {
 
     render() {
         return (
-            <div>
-                <p></p>
-                {this.state.option ? <h1>{this.state.option}</h1> : null }
-                <button onClick={this.handleShowOption}>Generuj</button>
+            <div className="container">
+                <p className="mainTitle">GENERATOR ŚMIESZNYCH CYTATÓW!</p>
+                <p className="writeQuote">{this.state.option ? <h1>{this.state.option}</h1> : null }</p>
+                <button className="generationButton" onClick={this.handleShowOption}>GENERUJ!</button>
                 <br/>
                 <input type="text" value={this.state.value} onChange={this.handleWriteJoke}/>
                 <button onClick={this.handleAddJoke}>Dodaj żart</button>
