@@ -3,7 +3,11 @@
 }
 
 body {
-    background-color: #87CEEB;
+    background-image: url("../img/background-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 }
 
 .container {
@@ -16,6 +20,19 @@ body {
     left: 0;
     margin: auto;
 }
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100vw;
+        height: 200px;
+        position: absolute;
+        top: -360px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        border: 2px solid red;
+    }
+}
 
 .mainTitle {
     text-align: center;
@@ -23,6 +40,13 @@ body {
     font-size: 30px;
     font-weight: 700;
     font-family: 'Domine', serif;
+}
+
+@media screen and (max-width: 500px){
+    .mainTitle {
+        line-height: 200px;
+        font-size: 20px;
+    }
 }
 
 .generationButton {
@@ -56,6 +80,17 @@ h1 {
     opacity: .7;
 }
 
+@media screen and (max-width: 500px){
+    h1 {
+        width: 80vw;
+        text-align: center;
+        font-size: 15px;
+        position: absolute;
+        top: 275px;
+        left: 10vh;
+        color: black;
+    }
+}
 
 input {
     width: 590px;
@@ -89,7 +124,7 @@ input {
 
 .additionalText {
     font-size: 30px;
-    color: grey;
+    color: black;
     font-weight: bold;
     position: absolute;
     top: 460px;
