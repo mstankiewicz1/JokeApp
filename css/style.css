@@ -12,31 +12,31 @@ body {
 
 .container {
     width: 600px;
-    height: 500px;
+    height: 550px;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    margin: auto;
+    margin: 0 auto;
+
 }
 @media screen and (max-width: 500px) {
     .container {
         width: 100vw;
-        height: 200px;
+        height: 150px;
         position: absolute;
         top: -360px;
         right: 0;
         bottom: 0;
         left: 0;
         margin: auto;
-        border: 2px solid red;
     }
 }
 
 .mainTitle {
     text-align: center;
-    line-height: 100px;
+    line-height: 200px;
     font-size: 30px;
     font-weight: 700;
     font-family: 'Domine', serif;
@@ -44,22 +44,39 @@ body {
 
 @media screen and (max-width: 500px){
     .mainTitle {
-        line-height: 200px;
+        line-height: 125px;
         font-size: 20px;
     }
 }
 
 .generationButton {
-    display: block;
-    margin: 0 auto;
     height: 50px;
     width: 100px;
+    position: absolute;
+    top: 150px;
+    left: 248px;
     letter-spacing: 1px;
     border-radius: 5px;
     border: 2px solid green;
     background-color: white;
     color: green;
     font-weight: 700;
+}
+
+@media screen and (max-width: 500px){
+    .generationButton {
+        height: 40px;
+        width: 100px;
+        position: absolute;
+        top: 140px;
+        left: 198px;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        border: 2px solid green;
+        background-color: white;
+        color: green;
+        font-weight: 700;
+    }
 }
 
 .generationButton:hover {
@@ -73,7 +90,7 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     position: absolute;
-    top: 200px;
+    top: 225px;
     font-family: 'Domine', serif;
     font-weight: 700;
     color: black;
@@ -86,7 +103,7 @@ h1 {
         text-align: center;
         font-size: 15px;
         position: absolute;
-        top: 275px;
+        top: 225px;
         left: 10vh;
         color: black;
     }
@@ -98,8 +115,20 @@ input {
     border: 2px solid red;
     border-radius: 5px;
     position: absolute;
-    top: 300px;
+    top: 325px;
+    margin: 0 auto;
     padding-left: 10px;
+}
+
+@media screen and (max-width: 500px){
+    input {
+        width: 80vw;
+        height: 40px;
+        position: absolute;
+        top: 325px;
+        left: 10vw;
+        font-size: 20px;
+    }
 }
 
 .addButton {
@@ -112,8 +141,24 @@ input {
     color: green;
     font-weight: 700;
     position: absolute;
-    top: 360px;
+    top: 385px;
     left: 223px;
+}
+
+@media screen and (max-width: 500px){
+    .addButton {
+        height: 40px;
+        width: 150px;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        border: 2px solid green;
+        background-color: white;
+        color: green;
+        font-weight: 700;
+        position: absolute;
+        top: 375px;
+        left: 175px;
+    }
 }
 
 .addButton:hover {
@@ -127,8 +172,18 @@ input {
     color: black;
     font-weight: bold;
     position: absolute;
-    top: 460px;
+    top: 500px;
     left: 155px;
     width: 280px;
+}
+
+@media screen and (max-width: 500px){
+    .additionalText {
+        width: 40vh;
+        font-size: 20px;
+        position: absolute;
+        top: 475px;
+        left: 30vh;
+    }
 }
 
