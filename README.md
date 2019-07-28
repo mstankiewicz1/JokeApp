@@ -9,4 +9,4 @@ Due to the large number of mobile devices, the change in the css code
 covers the following ranges:
 max 500px;
 501px - 768px;
-Above 768px
+Above 768px.
