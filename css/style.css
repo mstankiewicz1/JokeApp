@@ -19,8 +19,8 @@ body {
     bottom: 0;
     left: 0;
     margin: 0 auto;
-}
 
+}
 @media screen and (max-width: 500px) {
     .container {
         width: 100vw;
@@ -51,8 +51,8 @@ body {
 
 @media screen and (min-width: 501px) and (max-width: 768px){
     .mainTitle {
-        line-height: 200px;
-        font-size: 20px;
+        line-height: 125px;
+        font-size: 25px;
     }
 }
 
@@ -99,20 +99,23 @@ h1 {
     position: absolute;
     top: 225px;
     font-family: 'Domine', serif;
-    font-weight: 700;
+    font-weight: bold;
     color: black;
-    opacity: .7;
 }
 
 @media screen and (max-width: 500px){
     h1 {
-        width: 80vw;
-        text-align: center;
         font-size: 15px;
-        position: absolute;
-        top: 225px;
-        left: 10vh;
-        color: black;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px){
+    h1 {
+        font-size: 17px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
@@ -127,26 +130,16 @@ input {
     padding-left: 10px;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 768px){
     input {
         width: 80vw;
         height: 40px;
         position: absolute;
         top: 325px;
-        left: 10vw;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
         font-size: 20px;
-    }
-}
-
-@media screen and (min-width: 501px) and (max-width: 768px){
-    input {
-        width: 80%;
-        height: 40px;
-        line-height: 200px;
-        font-size: 20px;
-        position: absolute;
-        top: 325px;
-        left: 10%;
     }
 }
 
@@ -187,13 +180,15 @@ input {
 }
 
 .additionalText {
+    width: 280px;
     font-size: 30px;
     color: black;
     font-weight: bold;
     position: absolute;
     top: 500px;
-    left: 155px;
-    width: 280px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 500px){
@@ -202,7 +197,21 @@ input {
         font-size: 20px;
         position: absolute;
         top: 475px;
-        left: 30vh;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px){
+    .additionalText {
+        width: 45vh;
+        font-size: 25px;
+        position: absolute;
+        top: 475px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
     }
 }
 
