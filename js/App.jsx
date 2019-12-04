@@ -63,8 +63,8 @@ class Index extends React.Component {
         return (
             <div className="container">
                 <p className="mainTitle">GENERATOR ŚMIESZNYCH CYTATÓW!</p>
-                {this.state.option ? <h1>{this.state.option}</h1> : null }
                 <button className="generationButton" onClick={this.handleShowOption}>GENERUJ!</button>
+                {this.state.option ? <h1>{this.state.option}</h1> : null }
                 <br/>
                 <input type="text" value={this.state.value} onChange={this.handleWriteJoke}/>
                 <button className="addButton" onClick={this.handleAddJoke}>DODAJ CYTAT!</button>

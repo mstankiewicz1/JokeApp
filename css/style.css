@@ -8,82 +8,49 @@ body {
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 .container {
-    width: 600px;
-    height: 550px;
+    width: 80%;
+    height: 80%;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    margin: 0 auto;
+    margin: auto;
+}
 
-}
-@media screen and (max-width: 500px) {
-    .container {
-        width: 100vw;
-        height: 150px;
-        position: absolute;
-        top: -360px;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-    }
-}
 
 .mainTitle {
     text-align: center;
-    line-height: 200px;
-    font-size: 30px;
+    line-height: 100px;
+    font-size: 4vw;
     font-weight: 700;
     font-family: 'Domine', serif;
+    display: block;
+    margin: auto;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (min-width: 1200px) {
     .mainTitle {
-        line-height: 125px;
-        font-size: 20px;
-    }
-}
-
-@media screen and (min-width: 501px) and (max-width: 768px){
-    .mainTitle {
-        line-height: 125px;
-        font-size: 25px;
+        font-size: 2.5vw;
     }
 }
 
 .generationButton {
-    height: 50px;
-    width: 100px;
-    position: absolute;
-    top: 150px;
-    left: 248px;
+    width: 25vw;
+    height: 6vh;
+    display: block;
+    margin: auto;
+    font-size: 3vw;
     letter-spacing: 1px;
     border-radius: 5px;
     border: 2px solid green;
     background-color: white;
     color: green;
     font-weight: 700;
-}
-
-@media screen and (max-width: 500px){
-    .generationButton {
-        height: 40px;
-        width: 100px;
-        position: absolute;
-        top: 140px;
-        left: 198px;
-        letter-spacing: 1px;
-        border-radius: 5px;
-        border: 2px solid green;
-        background-color: white;
-        color: green;
-        font-weight: 700;
-    }
 }
 
 .generationButton:hover {
@@ -92,84 +59,155 @@ body {
     transition-duration: .4s;
 }
 
+@media screen and (min-width: 756px) and (max-width: 1024px) {
+    .generationButton {
+        height: 8vh;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+    .generationButton {
+        height: 9vh;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .generationButton {
+        width: 12vw;
+        height: 8vh;
+        font-size: 1.5vw;
+    }
+}
+
 h1 {
-    font-size: 20px;
+    font-size: 3vw;
     text-transform: uppercase;
     text-align: center;
-    position: absolute;
-    top: 225px;
     font-family: 'Domine', serif;
     font-weight: bold;
     color: black;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 500px){
+@media screen and (min-width: 756px) and (max-width: 1024px) {
     h1 {
-        font-size: 15px;
-        margin-left: 20px;
-        margin-right: 20px;
+        font-size: 2.5vw;
+        position: absolute;
+        top: 225px;
     }
 }
 
-@media screen and (min-width: 501px) and (max-width: 768px){
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
     h1 {
-        font-size: 17px;
-        margin-left: 20px;
-        margin-right: 20px;
+        font-size: 2vw;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 1.5vw;
+    }
+}
+
 
 input {
-    width: 590px;
-    height: 50px;
+    width: 80%;
+    height: 35px;
     border: 2px solid red;
     border-radius: 5px;
+    display: block;
     position: absolute;
-    top: 325px;
-    margin: 0 auto;
-    padding-left: 10px;
+    top: 15%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 550px) and (max-width: 750px) {
     input {
-        width: 80vw;
-        height: 40px;
         position: absolute;
-        top: 325px;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-        font-size: 20px;
+        top: 25%;
+    }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+    input {
+        position: absolute;
+        top: 30%;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+    input {
+        position: absolute;
+        top: 35%;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    input {
+        height: 55px;
     }
 }
 
 .addButton {
-    height: 50px;
-    width: 150px;
+    width: 30vw;
+    height: 6vh;
     letter-spacing: 1px;
     border-radius: 5px;
     border: 2px solid green;
     background-color: white;
     color: green;
     font-weight: 700;
+    font-size: 3vw;
+    display: block;
     position: absolute;
-    top: 385px;
-    left: 223px;
+    top: 40%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (min-width: 550px) and (max-width: 750px) {
     .addButton {
-        height: 40px;
-        width: 150px;
-        letter-spacing: 1px;
-        border-radius: 5px;
-        border: 2px solid green;
-        background-color: white;
-        color: green;
-        font-weight: 700;
         position: absolute;
-        top: 375px;
-        left: 175px;
+        top: 50%;
+    }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+    .addButton {
+        position: absolute;
+        top: 65%;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+    .addButton {
+        height: 10vh;
+        position: absolute;
+        top: 70%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .addButton {
+        font-size: 1.5vw;
+        width: 15vw;
+        height: 9vh;
     }
 }
 
@@ -180,38 +218,37 @@ input {
 }
 
 .additionalText {
-    width: 280px;
-    font-size: 30px;
+    width: 90%;
+    font-size: 4vw;
     color: black;
     font-weight: bold;
     position: absolute;
-    top: 500px;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    top: 75%;
+    text-align: center;
+    line-height: 150px;
+    font-family: 'Domine', serif;
+    display: block;
+    margin: auto;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (min-width: 751px) and (max-width: 1024px) {
     .additionalText {
-        width: 40vh;
-        font-size: 20px;
         position: absolute;
-        top: 475px;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
+        top: 85%;
     }
 }
 
-@media screen and (min-width: 501px) and (max-width: 768px){
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
     .additionalText {
-        width: 45vh;
-        font-size: 25px;
         position: absolute;
-        top: 475px;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
+        top: 90%;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .additionalText {
+        font-size: 2.5vw;
+    }
+}
+
 
