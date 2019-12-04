@@ -95,9 +95,12 @@ h1 {
 
 @media screen and (min-width: 756px) and (max-width: 1024px) {
     h1 {
-        font-size: 2.5vw;
+        font-size: 2vw;
         position: absolute;
-        top: 225px;
+        top: 250px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -140,7 +143,7 @@ input {
     input {
         position: absolute;
         top: 30%;
-        height: 40px;
+        height: 45px;
     }
 }
 
@@ -188,12 +191,13 @@ input {
     .addButton {
         position: absolute;
         top: 65%;
+        height: 8vh;
     }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1199px) {
     .addButton {
-        height: 10vh;
+        height: 11vh;
         position: absolute;
         top: 70%;
         right: 0;
